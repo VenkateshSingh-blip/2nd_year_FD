@@ -1,12 +1,17 @@
-const promise = new Promise((resolve,reject )=>{
-if(sucess){
-    resolve("operation sucessful");
-   }
-   else {
-    reject("operation failed");
-   }
+const success = true;
+
+const promise = new Promise((resolve, reject) => {
+    if (success) {
+        resolve("Operation successful");
+    } else {
+        reject("Operation failed");
+    }
 });
-promise.then(result=>{
-    console.log(result)
-})
-// not fully completed
+
+promise
+    .then(result => {
+        console.log(result);
+    })
+    .catch(error => {
+        console.log(error);
+    });
